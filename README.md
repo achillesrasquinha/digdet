@@ -33,6 +33,28 @@ $ make all
 
 Your app should now be up and running on http://localhost:5000.
 
+#### API
+Send in a base-64 encoded image string HTTP POST (with `image` as the parameter) request to [https://digdet.herokuapp.com/api/detect](https://digdet.herokuapp.com/api/detect). You'd then recieve a sample response as follows:
+```json
+{
+    "id": "<unique_response_id>",
+    "version": "<api_version>",
+    "data":
+    [
+      {
+        "digit": "<recognized_digit>",
+        "rect":
+        {
+          "x": "<x_coordinate>",
+          "y": "<y_coordinate>",
+          "width": "<contour_width>",
+          "height": "<contour_height>"
+        }
+      }
+    ]
+}
+```
+
 ### Dependencies
 * Python 2.7 and more or 3.5 and more
 * Node.js
