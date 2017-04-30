@@ -1,5 +1,12 @@
 # [digdet](https://digdet.herokuapp.com)
-> A realtime digit recognizer on the browser using Machine Learning
+> A realtime digit OCR on the browser using Machine Learning
+
+![](.github/logo.png)
+
+### Demo
+![](.github/demo.gif)
+
+You can view the demo on [https://digdet.herokuapp.com](https://digdet.herokuapp.com)
 
 ### Table of Contents
 * [Installation](#installation)
@@ -26,9 +33,12 @@ $ make install
 $ make all
 ```
 
+Your app should now be up and running on http://localhost:5000.
+
 ### Dependencies
 * Python 2.7 and more or 3.5 and more
 * Node.js
+* SASS
 
 ### License
 This repository has been released under the [MIT License](LICENSE).

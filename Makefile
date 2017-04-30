@@ -27,4 +27,4 @@ all:
 	make clean install start
 
 make push:
-	git push origin master & git push heroku master
+	git push origin master && git push heroku master
