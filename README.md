@@ -1,7 +1,5 @@
-# [digdet](https://digdet.herokuapp.com)
-> A realtime digit OCR on the browser using Machine Learning
-
 ![](.github/logo.png)
+> A realtime digit OCR on the browser using Machine Learning
 
 ### Demo
 ![](.github/demo.gif)
