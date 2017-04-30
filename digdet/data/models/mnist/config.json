@@ -1,0 +1,1 @@
+{"optimizer": "adam", "metrics": ["accuracy"], "loss": "categorical_crossentropy"}

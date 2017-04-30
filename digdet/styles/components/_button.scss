@@ -1,0 +1,45 @@
+.btn-brand {
+  color: $btn-brand-color;
+  background-color: $btn-brand-bgcolor;
+  border-color: $btn-brand-border;
+}
+
+.btn-brand:hover,
+.btn-brand:focus,
+.btn-brand:active,
+.btn-brand.active,
+.open .dropdown-toggle.btn-brand {
+  color: $btn-brand-color;
+  background-color: $btn-brand-bgcolor-active;
+  border-color: $btn-brand-border;
+}
+
+.btn-brand:active,
+.btn-brand.active,
+.open .dropdown-toggle.btn-brand {
+  background-image: none;
+}
+
+.btn-brand.disabled,
+.btn-brand[disabled],
+fieldset[disabled] .btn-brand,
+.btn-brand.disabled:hover,
+.btn-brand[disabled]:hover,
+fieldset[disabled] .btn-brand:hover,
+.btn-brand.disabled:focus,
+.btn-brand[disabled]:focus,
+fieldset[disabled] .btn-brand:focus,
+.btn-brand.disabled:active,
+.btn-brand[disabled]:active,
+fieldset[disabled] .btn-brand:active,
+.btn-brand.disabled.active,
+.btn-brand[disabled].active,
+fieldset[disabled] .btn-brand.active {
+  background-color: $btn-brand-bgcolor;
+  border-color: $btn-brand-border;
+}
+
+.btn-brand .badge {
+  color: $btn-brand-bgcolor;
+  background-color: $btn-brand-color;
+}

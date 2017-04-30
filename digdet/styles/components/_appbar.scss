@@ -1,0 +1,69 @@
+.appbar-brand {
+  background-color: $appbar-brand-bgcolor;
+  border-color: $appbar-brand-bgcolor-active;
+}
+.appbar-brand .navbar-brand {
+  color: $appbar-brand-color;
+}
+.appbar-brand .navbar-brand:hover,
+.appbar-brand .navbar-brand:focus {
+  color: $appbar-brand-color-active;
+}
+.appbar-brand .navbar-text {
+  color: $appbar-brand-color;
+}
+.appbar-brand .navbar-nav > li > a {
+  color: $appbar-brand-color;
+}
+.appbar-brand .navbar-nav > li > a:hover,
+.appbar-brand .navbar-nav > li > a:focus {
+  color: $appbar-brand-color-active;
+}
+.appbar-brand .navbar-nav > .active > a,
+.appbar-brand .navbar-nav > .active > a:hover,
+.appbar-brand .navbar-nav > .active > a:focus {
+  color: $appbar-brand-color-active;
+  background-color: $appbar-brand-bgcolor-active;
+}
+.appbar-brand .navbar-nav > .open > a,
+.appbar-brand .navbar-nav > .open > a:hover,
+.appbar-brand .navbar-nav > .open > a:focus {
+  color: $appbar-brand-color-active;
+  background-color: $appbar-brand-bgcolor-active;
+}
+.appbar-brand .navbar-toggle {
+  border-color: $appbar-brand-bgcolor-active;
+}
+.appbar-brand .navbar-toggle:hover,
+.appbar-brand .navbar-toggle:focus {
+  background-color: $appbar-brand-bgcolor-active;
+}
+.appbar-brand .navbar-toggle .icon-bar {
+  background-color: $appbar-brand-color;
+}
+.appbar-brand .navbar-collapse,
+.appbar-brand .navbar-form {
+  border-color: $appbar-brand-color;
+}
+.appbar-brand .navbar-link {
+  color: $appbar-brand-color;
+}
+.appbar-brand .navbar-link:hover {
+  color: $appbar-brand-color-active;
+}
+
+@media (max-width: 767px) {
+  .appbar-brand .navbar-nav .open .dropdown-menu > li > a {
+    color: $appbar-brand-color;
+  }
+  .appbar-brand .navbar-nav .open .dropdown-menu > li > a:hover,
+  .appbar-brand .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: $appbar-brand-color-active;
+  }
+  .appbar-brand .navbar-nav .open .dropdown-menu > .active > a,
+  .appbar-brand .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .appbar-brand .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: $appbar-brand-color-active;
+    background-color: $appbar-brand-bgcolor-active;
+  }
+}

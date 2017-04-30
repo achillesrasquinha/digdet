@@ -1,0 +1,15 @@
+# virtual env
+.venv
+
+# Dependencies
+node_modules
+Gemfile.lock
+
+# Cache
+.sass-cache
+notebooks/.ipynb_checkpoints
+notebooks/data
+notebooks/mnist.npz
+
+# misc
+images

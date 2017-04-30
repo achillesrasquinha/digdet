@@ -1,0 +1,21 @@
+html, body {
+  font-family: $body-font-family;
+}
+
+.font-brand {
+  font-family: $font-family-brand;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+@media (max-width: 992px) {
+    .text-md-center {
+        text-align: center;
+    }
+}

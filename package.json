@@ -1,0 +1,27 @@
+{
+  "name": "digdet",
+  "version": "1.0.0",
+  "description": "> A realtime digit recognizer using Machine Learning",
+  "main": "webpack.config.js",
+  "scripts": {
+    "webpack-watch": "webpack --watch",
+    "sass-watch": "sass --watch digdet/styles/App.scss:digdet/assets/css/styles.css --sourcemap=none",
+    "start": "concurrently --kill-others \"npm run webpack-watch\" \"npm run sass-watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.4.0",
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^3.0.2"
+  }
+}

@@ -1,0 +1,21 @@
+$color-white                        : #FFFFFF;
+$color-primary                      : #9C27B0;
+$color-primary-dark                 : #7B1FA2;
+$color-primary-darkest              : #4A148C;
+
+$font-family-base                   : "Roboto", sans-serif;
+$font-family-brand                  : "Cookie";
+$font-weight-light                  : 300;
+$font-weight-bold                   : 700;
+
+$body-font-family                   : $font-family-base;
+
+$btn-brand-color                    : $color-white;
+$btn-brand-bgcolor                  : $color-primary;
+$btn-brand-border                   : $color-primary-dark;
+$btn-brand-bgcolor-active           : $color-primary-darkest;
+
+$appbar-brand-bgcolor               : $color-primary;
+$appbar-brand-bgcolor-active        : $color-primary-dark;
+$appbar-brand-color                 : #ECF0F1;
+$appbar-brand-color-active          : #ECDBFF;
