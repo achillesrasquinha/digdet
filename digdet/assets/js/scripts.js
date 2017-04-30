@@ -11,8 +11,7 @@ const renderCanvas         = () => {
   var width   = Math.min(Config.WEBCAM_MAX_WIDTH, $container.width())
   var height  = width / Config.WEBCAM_ASPECT_RATIO
 
-  Webcam.set({ width: width, height: height, dest_width: width,
-    dest_height: height, unfreeze_snap: false })
+  Webcam.set({ width: width, height: height, unfreeze_snap: false })
   Webcam.attach('#webcam')
 
   canvas.setWidth(width)
@@ -70,10 +69,10 @@ $(document).ready(( ) => {
 
                 var rect   = new fabric.Rect({ left: rect.x, top: rect.y,
                   width: rect.width, height: rect.height, fill: 'transparent',
-                  stroke: '#9C27B0', strokeWidth: 1.5 })
+                  stroke: '#9C27B0', strokeWidth: 3 })
 
-                var text   = new fabric.Text(digit, { left: rect.left, top: rect.top,
-                  fill: '#9C27B0' })
+                var text   = new fabric.Text(digit, { fontFamily: "Roboto",
+                  left: rect.left, top: rect.top, fill: '#FFFFFF' })
 
                 canvas.add(rect)
                 canvas.add(text)
