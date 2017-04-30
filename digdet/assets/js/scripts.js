@@ -1,13 +1,27 @@
-$(document).ready(( ) => {
-  var width  = 320
-  var height = 240
+var Config                 = {  }
+Config.WEBCAM_MAX_WIDTH    = 320
+Config.WEBCAM_MAX_HEIGHT   = 240
+Config.WEBCAM_ASPECT_RATIO = Config.WEBCAM_MAX_WIDTH / Config.WEBCAM_MAX_HEIGHT
 
-  Webcam.set({ width: 320, height: 240, unfreeze_snap: false })
+var canvas                 = new fabric.Canvas('canvas')
+
+const renderCanvas         = () => {
+  var $container = $('#canvas-container')
+
+  var width   = Math.min(Config.WEBCAM_MAX_WIDTH, $container.width())
+  var height  = width / Config.WEBCAM_ASPECT_RATIO
+
+  Webcam.set({ width: width, height: height, dest_width: width,
+    dest_height: height, unfreeze_snap: false })
   Webcam.attach('#webcam')
 
-  var canvas = new fabric.Canvas('canvas')
   canvas.setWidth(width)
   canvas.setHeight(height)
+}
+
+$(document).ready(( ) => {
+  renderCanvas()
+  $('.canvas-container').addClass('hidden')
 
   $('#btn-freeze').click(( ) => {
     Webcam.freeze()
@@ -20,7 +34,7 @@ $(document).ready(( ) => {
     Webcam.unfreeze()
 
     $('#webcam').removeClass('hidden')
-    $('#canvas').addClass('hidden')
+    $('.canvas-container').addClass('hidden')
 
     $('#btn-toolbar-freeze').addClass('hidden')
     $('#btn-toolbar-unfreeze').removeClass('hidden')
@@ -43,7 +57,7 @@ $(document).ready(( ) => {
           if ( status == 'success' ) {
             fabric.Image.fromURL(data, (image) => {
               $('#webcam').addClass('hidden')
-              $('#canvas').removeClass('hidden')
+              $('.canvas-container').removeClass('hidden')
 
               canvas.add(image)
 
@@ -53,10 +67,6 @@ $(document).ready(( ) => {
                 var region = regions[i]
                 var rect   = region['rect']
                 var digit  = region['digit'].toString()
-
-                console.log(digit)
-
-                console.log(region)
 
                 var rect   = new fabric.Rect({ left: rect.x, top: rect.y,
                   width: rect.width, height: rect.height, fill: 'transparent',

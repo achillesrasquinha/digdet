@@ -12,10 +12,10 @@ class Home extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-md-4 col-md-offset-4">
-              <div className="panel panel-default">
-                <div className="panel-body">
+              <div className="text-center">
+                <div id="canvas-container" className="img-thumbnail">
                   <div id="webcam"/>
-                  <canvas id="canvas" className="hidden"/>
+                  <canvas id="canvas"/>
                 </div>
               </div>
             </div>
