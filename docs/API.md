@@ -62,7 +62,7 @@ You'd then recieve a response as follows:
 | URL    | https://digdet.herokuapp.com/api/glyph  |
 
 #### Returns
-An array of supported languages of the structure:
+An array of supported glyphs of the structure:
 ```json
 [
   {
