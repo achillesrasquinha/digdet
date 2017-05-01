@@ -1,5 +1,9 @@
+# imports - standard imports
+import os
+import json
+
 # imports - compatibility imports
-from flask import request
+from flask import request, jsonify
 
 # imports - module imports
 from digdet.config.server import ServerConfig
@@ -20,6 +24,18 @@ def detect():
 
     response.set_data(regions)
 
-    json_    = response.toJSON()
+    dict_    = response.todict()
+    json_    = jsonify(dict_)
+
+    return json_
+
+@app.route(ServerConfig.URL.LANG)
+def lang():
+    path  = os.path.join(ServerConfig.Path.DATA, 'lang.json')
+
+    with open(path, 'r') as f:
+        data = json.load(f)
+
+    json_ = jsonify(data)
 
     return json_

@@ -12,14 +12,16 @@ from digdet.util import pardir
 
 class BaseConfig(object):
     NAME        = 'digdet'
-    VERSION     = (0, 1, 0)
+    VERSION     = (0, 2, 0)
     ENVIRONMENT = 'development'
 
     class URL(object):
         BASE    = "/"
         DETECT  = "/api/detect"
+        LANG    = "/api/lang"
 
     class Path(object):
         ROOT      = os.path.abspath(pardir(__file__, 2))
         TEMPLATES = os.path.join(ROOT, 'templates')
         ASSETS    = os.path.join(ROOT, 'assets')
+        DATA      = os.path.join(ROOT, 'data')

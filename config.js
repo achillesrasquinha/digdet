@@ -2,6 +2,8 @@ var path           = require('path')
 
 var Config         = { };
 
+Config.ENVIRONMENT = process.env.NODE_ENV
+
 Config.Path        = { };
 Config.Path.ROOT   = __dirname;
 Config.Path.BASE   = path.join(Config.Path.ROOT, 'digdet')

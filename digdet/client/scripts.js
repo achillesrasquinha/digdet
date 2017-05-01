@@ -88,4 +88,6 @@ $(document).ready(( ) => {
       })
     })
   })
+
+  $('.selectpicker').selectpicker()
 })

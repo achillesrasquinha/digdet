@@ -16,5 +16,4 @@ class AppConfig(BaseConfig):
         FIND_CONTOURS = { "mode": cv2.RETR_EXTERNAL, "method": cv2.CHAIN_APPROX_SIMPLE }
 
     class Path(BaseConfig.Path):
-        DATA   = os.path.join(BaseConfig.Path.ROOT, 'data')
-        MODELS = os.path.join(DATA, 'models')
+        MODELS = os.path.join(BaseConfig.Path.DATA, 'models')
