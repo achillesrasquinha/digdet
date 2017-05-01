@@ -15,15 +15,15 @@
 | Name    | Type                      | Description                               | Required |
 |---------|---------------------------|-------------------------------------------|----------|
 | `image` | `String`                  | base-64 encoded binary data of the image. | Yes      |
-| `lang`  | `String`, `Array<String>` | ISO 639-1 Language Code, defaults to "en" | Optional |
+| `lang`  | `String`, `Array<String>` | ISO 639-1 Language Code, defaults to `"en"` | Optional |
 
 #### Returns
-| Fields    | Type     | Values                     | Description
-|-----------|----------|----------------------------|------------
-| `status`  | `String` | "success", "fail", "error" | status of the response.
-| `version` | `String` |                            | api version.
-| `id`      | `String` | UUID string                | unique UUID string for each response
-| `data`    | `Array`  |                            | an array of detected digits.
+| Fields    | Type     | Values                           | Description
+|-----------|----------|----------------------------------|------------
+| `status`  | `String` | `"success"`, `"fail"`, `"error"` | status of the response.
+| `version` | `String` |                                  | api version.
+| `id`      | `String` | UUID string                      | unique UUID string for each response
+| `data`    | `Array`  |                                  | an array of detected digits.
 
 #### Example
 ```python
