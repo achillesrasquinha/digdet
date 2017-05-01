@@ -8,7 +8,7 @@ class AppBar extends React.Component {
       <div className="navbar navbar-default appbar-brand navbar-static-top">
         <div className="container-fluid">
           <div className="navbar-header">
-            <a className="navbar-brand">
+            <a className="navbar-brand" href={`${Config.URL.BASE}`}>
               <div className="font-brand font-bold">
                 {Config.App.NAME}
               </div>
