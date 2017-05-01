@@ -36,8 +36,6 @@ Your app should now be up and running on http://localhost:5000.
 #### API
 Send in a base-64 encoded image string HTTP POST (with `image` as the parameter) request to [https://digdet.herokuapp.com/api/detect](https://digdet.herokuapp.com/api/detect). Let's consider a local test image:
 
-![](.github/test.jpg)
-
 ```python
 >>> import base64, requests, json, pprint
 >>> with open('test.jpg', 'rb') as f:
