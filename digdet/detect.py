@@ -8,7 +8,7 @@ from digdet.util import get_cv_version, autodict, area_rect
 
 import digdet
 
-def detect(image):
+def detect(image, glyph = AppConfig.DEFAULT_GLYPH):
     array       = np.asarray(image, dtype = np.uint8)
     array       = cv2.cvtColor(array, cv2.COLOR_RGB2BGR)
     gray        = cv2.cvtColor(array, cv2.COLOR_BGR2GRAY)
@@ -26,8 +26,8 @@ def detect(image):
         _, contours    = cv2.findContours(threshcpy, **AppConfig.Parameters.FIND_CONTOURS)
 
     rects       = [cv2.boundingRect(contour) for contour in contours]
-    area_thresh = 0.01
     area_image  = gray.size
+    area_thresh = 0.01
 
     rects       = [rect for rect in rects if (area_rect(rect) / area_image) >= area_thresh]
 
@@ -59,7 +59,7 @@ def detect(image):
         digit         = int(label)
 
         data['digit'] = digit
-        
+
         regions.append(data)
 
     return regions

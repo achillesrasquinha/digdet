@@ -8,6 +8,8 @@ import cv2
 from digdet.config.base import BaseConfig
 
 class AppConfig(BaseConfig):
+    DEFAULT_GLYPH    = ["la"]
+    
     MNIST_SIZE_INPUT = (28, 28)
 
     class Parameters(object):

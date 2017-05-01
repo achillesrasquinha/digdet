@@ -21,16 +21,18 @@ class Response(object):
 		BAD_REQUEST          = { 'code': 400, 'message': 'Bad Request' }
 		UNPROCESSABLE_ENTITY = { 'code': 422, 'message': 'Unprocessable Entity' }
 
-	def __init__(self, status = None, data = None, error = None):
+	def __init__(self, status = None, data = None, code = 200, error = None):
 		self.uuid    = uuid.uuid4()
 		self.version = get_version_str(ServerConfig.VERSION)
 		self.status  = assign_if_none(status, Response.STATUS.SUCCESS)
 		self.data    = data
+		self.code    = code
 		self.error   = error
 
 	def set_error(self, error):
 		self.status  = Response.STATUS.ERROR
 		self.error   = error
+		self.code    = self.error['code']
 
 	def set_data(self, data):
 		self.data    = data

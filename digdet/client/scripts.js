@@ -19,6 +19,18 @@ const renderCanvas         = () => {
 }
 
 $(document).ready(( ) => {
+  $.ajax({
+    url: '/api/glyph',
+    success: function (data) {
+      data.map((glyph) => {
+        $('.select-glyph').append(`<option value=${glyph.code}>${glyph.script}</option>`)
+      })
+
+      $('.select-lang option[value="en"]').attr('selected', 'selected')
+      $('.select-lang').selectpicker()
+    }
+  })
+
   renderCanvas()
   $('.canvas-container').addClass('hidden')
 
@@ -43,14 +55,15 @@ $(document).ready(( ) => {
     Webcam.snap((data) => {
       var index  = data.indexOf(',')
       var b64str = data.substr(index + 1)
-      var params = { "image": b64str }
+      var glyph  = $('.select-glyph').val()
+
+      var params = { "image": b64str, "glyph": glyph }
 
       $.ajax({
         url: '/api/detect',
         data: params,
         type: "POST",
         success: (response)  => {
-          var response = JSON.parse(response)
           var status   = response.status
 
           if ( status == 'success' ) {
@@ -88,6 +101,4 @@ $(document).ready(( ) => {
       })
     })
   })
-
-  $('.selectpicker').selectpicker()
 })

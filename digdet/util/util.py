@@ -47,7 +47,7 @@ def uuid_to_str(uuid):
 
 	return string
 
-def b64_to_image(b64str):
+def b64_to_image(b64str):	
 	decode = base64.b64decode(b64str)
 	bytes_ = io.BytesIO(decode)
 

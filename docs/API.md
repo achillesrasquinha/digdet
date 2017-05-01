@@ -12,10 +12,10 @@
 | Method | POST                                    |
 
 #### Parameters
-| Name    | Type                      | Description                               | Required |
-|---------|---------------------------|-------------------------------------------|----------|
-| `image` | `String`                  | base-64 encoded binary data of the image. | Yes      |
-| `lang`  | `String`, `Array<String>` | ISO 639-1 Language Code, defaults to `"en"` | Optional |
+| Name    | Type                      | Description                                   | Required |
+|---------|---------------------------|-----------------------------------------------|----------|
+| `image` | `String`                  | base-64 encoded binary data of the image.     | Yes      |
+| `lang`  | `Array<String>`           | Glyph Codes, defaults to `["la"]`             | Optional |
 
 #### Returns
 | Fields    | Type     | Values                           | Description
@@ -55,23 +55,23 @@ You'd then recieve a response as follows:
  'version': '0.1.0'}
 ```
 
-### Supported Languages
+### Supported Glyphs
 #### General
 | Key    | Value                                   |
 |--------|-----------------------------------------|
-| URL    | https://digdet.herokuapp.com/api/lang   |
+| URL    | https://digdet.herokuapp.com/api/glyph  |
 
 #### Returns
 An array of supported languages of the structure:
 ```json
 [
   {
-    "code": "<iso 639-1 language code>",
-    "name": "<language name>",
-    "nativeName": [
-      "<language native name 1>",
-      "<language native name 2>",
-      "<language native name n>",
+    "code": "<glyph code>",
+    "script": "<script name>",
+    "numeral": [
+      "<numeral name 1>",
+      "<numeral name 2>",
+      "<numeral name n>",
     ]
   },
   {
@@ -79,3 +79,8 @@ An array of supported languages of the structure:
   }
 ]
 ```
+
+#### Available Glyphs
+| Code | Script | Numeral
+|------|--------|---------
+| la   | Latin  | Arabic, Hindu, Hindu-Arabic

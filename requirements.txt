@@ -2,6 +2,7 @@ jupyter
 scipy
 matplotlib
 Flask
+dataset
 gunicorn
 numpy
 scipy

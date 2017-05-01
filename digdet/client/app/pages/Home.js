@@ -5,26 +5,6 @@ import AppBar from '../components/AppBar'
 import Config from '../Config'
 
 class Home extends React.Component {
-  constructor ( ) {
-    super ( )
-
-    this.state = Home.defaultStates
-  }
-
-  componentWillMount ( ) {
-    var thss   = this
-
-    $.ajax({
-      url: `${Config.URL.LANG}`,
-      success: function (data) {
-        console.log(data)
-        thss.setState({
-          lang: data
-        })
-      }
-    })
-  }
-
   render ( ) {
     return (
       <div className="wrapper">
@@ -34,10 +14,7 @@ class Home extends React.Component {
             <div className="col-md-4 col-md-offset-4">
               <div className="text-center">
                 <div className="form-group">
-
-                  <select className="selectpicker" data-style="btn-primary btn-brand" multiple>
-                    {this.state.lang.map(({code, name}) => <option key={code} value={code}>{name}</option>)}
-                  </select>
+                  <select className="selectpicker select-glyph" data-style="btn-primary btn-brand" multiple/>
                 </div>
                 <div id="canvas-container" className="img-thumbnail">
                   <div id="webcam"/>
@@ -77,10 +54,6 @@ class Home extends React.Component {
       </div>
     )
   }
-}
-
-Home.defaultStates = {
-  lang: [ ]
 }
 
 export default Home

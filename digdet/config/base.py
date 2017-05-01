@@ -18,10 +18,12 @@ class BaseConfig(object):
     class URL(object):
         BASE    = "/"
         DETECT  = "/api/detect"
-        LANG    = "/api/lang"
+        GLYPH   = "/api/glyph"
 
     class Path(object):
         ROOT      = os.path.abspath(pardir(__file__, 2))
         TEMPLATES = os.path.join(ROOT, 'templates')
         ASSETS    = os.path.join(ROOT, 'assets')
         DATA      = os.path.join(ROOT, 'data')
+
+        DATABASE  = os.path.join(os.path.expanduser('~'), '.digdet.db')
